@@ -385,4 +385,8 @@ footer .footer_info .col-12 .social_icons .icon {
 .addbg {
   background-color: rgba(238, 238, 238, 0.6);
 }
+
+.title {
+  text-shadow: 5px 5px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+}
 /*# sourceMappingURL=indexCss.css.map */

@@ -1,0 +1,301 @@
+$color_black: #080404
+$color_yellow: #F6C714
+$color_pink: #F2B7C3
+$border_color: #dee2e6
+$color_orange: rgba(#EB7A27, 1)
+
+// $fz_sm:
+// $fz_md:
+// $fz_lg:
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    position: relative
+    font-family: 'Oswald', sans-serif
+    // user-select: none
+    // overflow-x: hidden
+
+
+html,body
+    width: 100%
+    height: 100%
+    background-color:#001223
+
+body
+    // height: 6000px
+    min-width: 450px
+    overflow-x: hidden
+
+nav.navbar.navbar-expand-lg.fixed-top
+    background-color: rgba(#fff, 0.26)
+
+header#header_jumbotron
+    // border: solid 3px red
+    height: 360px
+    background-image: url(./photo/background.jpeg)
+    background-size: cover
+    background-position: center
+    border-bottom: 3px solid gray
+    // border-radius: 0px 0px 10px 10px
+
+#container_about
+    // background-color: #B1B1B1
+    color: #fff
+    display: flex
+    justify-content: center
+    align-items: center
+    .box
+        border: solid 1px #ccc
+        background-image: url(./photo/baseball.jpg)
+        background-color: rgba(#FBCB00, 0.9)
+        color: #001223
+        border-radius: 10px
+        margin: 20px 0px
+        // background-color: #f24
+        // text-align: center
+        width: 80%
+        h2,h3.team
+            text-shadow:    5px 5px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000
+            color: white
+        hr
+            background-color: #eee
+        .about_img
+            // border: solid 1px black
+            max-width: 200px
+            img
+                width: 100%
+                // height: 100%
+        .team_des
+
+            border-radius: 4px
+            padding: 10px
+            p
+                color: #001223d2
+                font-weight: bold
+
+
+// 最新消息-news
+#container_news
+    background-color: #001223
+    .news_card
+        // border: solid 1px black
+        height: 260px
+        padding: 2px
+        margin: 6px
+        overflow: hidden
+        &:hover
+            &::after
+                // display: block
+                opacity: 1
+                transition-delay: 0.3s
+                transition-duration: 0.7s
+                transform: translateY(-10px)
+        &::before
+            // border: solid 1px #eee
+            border-radius: 6px
+            content: "主題活動"
+            text-align: center
+            line-height: 36px
+            color: #ccc
+            font-size: 14px
+            font-weight: bold
+            display: block
+            width: 80px
+            height: 36px
+            background-color: rgba(#013 , 0.9)
+            position: absolute
+            top: 12px
+            right: 12px
+            z-index: 1
+        &::after
+            content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam eaque tempora fugit!"
+            // 隱藏活動說明（.news_card:hover觸發顯示）
+            // display: none
+            opacity: 0
+
+            // width: 100%
+            // height: 60px
+            padding: 6px 16px
+            color: #ccc
+            background-color: rgba(#333,0.8)
+            position: absolute
+            bottom: 0px
+            left: 0px
+            z-index: 1
+            transform: translateY(20px)
+        &:hover
+            .card
+                transform: scale(1.1)
+        .card
+            height: 100%
+            background-size: cover
+            background-position: center
+            transition-duration: 0.8s
+        .card-1
+            background-image: url(./photo/new-1.jpg)
+        .card-2
+            background-image: url(./photo/new-2.jpg)
+        .card-3
+            background-image: url(./photo/new-3.jpg)
+        .card-4
+            background-image: url(./photo/new-4.jpg)
+        .card-5
+            background-image: url(./photo/new-5.jpg)
+        .card-6
+            background-image: url(./photo/new-6.jpg)
+
+    // 會員專區
+#container_fansClub
+    // overflow: hidden
+    .container
+        border: solid 2px #fff
+        border-radius: 10px
+    .row
+        padding: 80px
+        // overflow: hidden
+    .fanscard
+        width: 100%
+        transition-duration: 0.8s
+        cursor: pointer
+        &:hover
+            transform: rotate(90deg) scale(1.4)
+    .fans-1
+        transform: translateX(60px)
+    .fans-2
+    .fans-3
+        transform: translateX(-60px)
+    // .card_info
+    //     p.bonus
+    //         color: red
+    .card_info
+        border: solid 1px #fff
+        border-radius: 10px
+        background: #ccc
+        width: 25%
+        position: absolute
+        top: 50%
+        right: 0%
+        transform: translateY(-50%)
+        opacity: 0
+        transition-duration: 0.7s
+        z-index: 20
+
+@media screen and (max-width: 768px)
+    #container_fansClub
+        .row
+            padding: 60px
+        .card_info
+            h3
+                font-size: 20px
+            p.bonus
+                font-size: 12px
+        .fans-1
+            transform: translateX(50px)
+        .fans-2
+        .fans-3
+            transform: translateX(-50px)
+
+@media screen and (max-width: 576px)
+    #container_fansClub
+        .card_info
+            top: 0%
+            right: 0%
+            transform: translateY(0%)
+
+#container_State_Video
+    table
+        tr
+            // border: solid 1px $border_color
+            &:nth-child(2n)
+                background-color: #fff
+            &:nth-child(2n+1)
+                background-color:#ccc
+            td
+                &:first-child
+                    // width: 50px
+            td.teams img
+                // height: 80px
+                width: 40%
+                min-width: 60px
+            td
+                padding: 6px 10px
+                border: solid 1px $border_color
+
+footer
+    background-color: #141414
+    padding: 30px 0px
+    color: rgba(#fff, 0.8)
+    .footer_map
+    .footer_info
+        // width: 100%
+        // height: 100%
+        // border: solid 1px red
+        // height: 200px
+        .footer_logo
+            border-radius: 6px
+            background-image: url(./photo/logo_new.png)
+            background-size: cover
+            background-repeat: no-repeat
+            background-position: center center
+            width: 100%
+            height: 100%
+        // footer_連結(about/news/media/....)
+        ul li
+            // border: solid 1px #f24
+            display: flex
+            justify-content: center
+            a
+                color: rgba(#fff, 0.8)
+                text-decoration: none
+                transition-duration: 0.5s
+                // border: solid 1px #fff
+                &::after
+                    content: ""
+                    position: absolute
+                    border-bottom: solid 1px $color_orange
+                    bottom: -2px
+                    left: 50%
+                    right: 50%
+                    transition: 0.3s
+                    opacity: 0
+                &:hover
+                    color: $color_orange
+                    &:after
+                        left: 0%
+                        right: 0%
+                        opacity: 1
+        // footer_icons
+        .col-12 .social_icons
+            .icon
+                margin: 4px
+
+@media screen and (max-width: 767px)
+    footer
+        .footer_info-1
+            height: 200px
+        .footer_info .item-1
+            height: 100%
+
+// @media screen and (max-width: 575px)
+//     footer
+//         .footer_info .item-1
+//             // width: 50%
+//             // height: 50%
+
+
+// debug
+nav.navbar.navbar-expand-lg.fixed-top,header#header_jumbotron,#container_about,#container_news,#container_fansClub
+    // display: none
+
+
+// jquery add css
+.addzindex
+    z-index: 10
+
+.addbg
+    background-color: rgba(#eee, 0.6)
+
+#container_about .box
+    // display: none

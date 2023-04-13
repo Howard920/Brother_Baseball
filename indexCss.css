@@ -1,0 +1,342 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  font-family: 'Oswald', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #001223;
+}
+
+body {
+  min-width: 450px;
+  overflow-x: hidden;
+}
+
+nav.navbar.navbar-expand-lg.fixed-top {
+  background-color: rgba(255, 255, 255, 0.26);
+}
+
+header#header_jumbotron {
+  height: 360px;
+  background-image: url(./photo/background.jpeg);
+  background-size: cover;
+  background-position: center;
+  border-bottom: 3px solid gray;
+}
+
+#container_about {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#container_about .box {
+  border: solid 1px #ccc;
+  background-image: url(./photo/baseball.jpg);
+  background-color: rgba(251, 203, 0, 0.9);
+  color: #001223;
+  border-radius: 10px;
+  margin: 20px 0px;
+  width: 80%;
+}
+
+#container_about .box h2, #container_about .box h3.team {
+  text-shadow: 5px 5px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+  color: white;
+}
+
+#container_about .box hr {
+  background-color: #eee;
+}
+
+#container_about .box .about_img {
+  max-width: 200px;
+}
+
+#container_about .box .about_img img {
+  width: 100%;
+}
+
+#container_about .box .team_des {
+  border-radius: 4px;
+  padding: 10px;
+}
+
+#container_about .box .team_des p {
+  color: #001223d2;
+  font-weight: bold;
+}
+
+#container_news {
+  background-color: #001223;
+}
+
+#container_news .news_card {
+  height: 260px;
+  padding: 2px;
+  margin: 6px;
+  overflow: hidden;
+}
+
+#container_news .news_card:hover::after {
+  opacity: 1;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+#container_news .news_card::before {
+  border-radius: 6px;
+  content: "主題活動";
+  text-align: center;
+  line-height: 36px;
+  color: #ccc;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  width: 80px;
+  height: 36px;
+  background-color: rgba(0, 17, 51, 0.9);
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+}
+
+#container_news .news_card::after {
+  content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam eaque tempora fugit!";
+  opacity: 0;
+  padding: 6px 16px;
+  color: #ccc;
+  background-color: rgba(51, 51, 51, 0.8);
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: 1;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+#container_news .news_card:hover .card {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#container_news .news_card .card {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+#container_news .news_card .card-1 {
+  background-image: url(./photo/new-1.jpg);
+}
+
+#container_news .news_card .card-2 {
+  background-image: url(./photo/new-2.jpg);
+}
+
+#container_news .news_card .card-3 {
+  background-image: url(./photo/new-3.jpg);
+}
+
+#container_news .news_card .card-4 {
+  background-image: url(./photo/new-4.jpg);
+}
+
+#container_news .news_card .card-5 {
+  background-image: url(./photo/new-5.jpg);
+}
+
+#container_news .news_card .card-6 {
+  background-image: url(./photo/new-6.jpg);
+}
+
+#container_fansClub .container {
+  border: solid 2px #fff;
+  border-radius: 10px;
+}
+
+#container_fansClub .row {
+  padding: 80px;
+}
+
+#container_fansClub .fanscard {
+  width: 100%;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+  cursor: pointer;
+}
+
+#container_fansClub .fanscard:hover {
+  -webkit-transform: rotate(90deg) scale(1.4);
+          transform: rotate(90deg) scale(1.4);
+}
+
+#container_fansClub .fans-1 {
+  -webkit-transform: translateX(60px);
+          transform: translateX(60px);
+}
+
+#container_fansClub .fans-3 {
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+}
+
+#container_fansClub .card_info {
+  border: solid 1px #fff;
+  border-radius: 10px;
+  background: #ccc;
+  width: 25%;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+  z-index: 20;
+}
+
+@media screen and (max-width: 768px) {
+  #container_fansClub .row {
+    padding: 60px;
+  }
+  #container_fansClub .card_info h3 {
+    font-size: 20px;
+  }
+  #container_fansClub .card_info p.bonus {
+    font-size: 12px;
+  }
+  #container_fansClub .fans-1 {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  #container_fansClub .fans-3 {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #container_fansClub .card_info {
+    top: 0%;
+    right: 0%;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+#container_State_Video table tr:nth-child(2n) {
+  background-color: #fff;
+}
+
+#container_State_Video table tr:nth-child(2n+1) {
+  background-color: #ccc;
+}
+
+#container_State_Video table tr td.teams img {
+  width: 40%;
+  min-width: 60px;
+}
+
+#container_State_Video table tr td {
+  padding: 6px 10px;
+  border: solid 1px #dee2e6;
+}
+
+footer {
+  background-color: #141414;
+  padding: 30px 0px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+footer .footer_info .footer_logo {
+  border-radius: 6px;
+  background-image: url(./photo/logo_new.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
+footer .footer_info ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .footer_info ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+footer .footer_info ul li a::after {
+  content: "";
+  position: absolute;
+  border-bottom: solid 1px #eb7a27;
+  bottom: -2px;
+  left: 50%;
+  right: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+footer .footer_info ul li a:hover {
+  color: #eb7a27;
+}
+
+footer .footer_info ul li a:hover:after {
+  left: 0%;
+  right: 0%;
+  opacity: 1;
+}
+
+footer .footer_info .col-12 .social_icons .icon {
+  margin: 4px;
+}
+
+@media screen and (max-width: 767px) {
+  footer .footer_info-1 {
+    height: 200px;
+  }
+  footer .footer_info .item-1 {
+    height: 100%;
+  }
+}
+
+.addzindex {
+  z-index: 10;
+}
+
+.addbg {
+  background-color: rgba(238, 238, 238, 0.6);
+}
+/*# sourceMappingURL=indexCss.css.map */

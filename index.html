@@ -14,15 +14,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julee&family=Oswald:wght@200;300;400&display=swap"
         rel="stylesheet">
-    <style>
-
-    </style>
+    <style></style>
 
 </head>
 
 <body>
 
-
+    <!-- 導覽列 -->
     <!-- navbar-dark bg-dark -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <a class="navbar-brand" href="#">
@@ -58,6 +56,7 @@
         </div>
     </nav>
 
+    <!-- 大屏幕 -->
     <header id="header_jumbotron">
         <div class="container">
             <div class="row">
@@ -65,11 +64,12 @@
         </div>
     </header>
 
+    <!-- 球隊簡史 - About -->
     <div id="container_about" class="container-fluid">
         <div class="box p-3 m-5">
             <h2 data-0="transform: translateY(100px); opacity: 0" data-60="transform: translateY(0px); opacity: 1">About
             </h2>
-            <!-- <hr class="m-2"> -->
+            <hr class="m-2" data-0="opacity: 0" data-100="opacity: 1">
             <div class="team">
                 <div class="row">
                     <div class="about_img col-3 d-flex justify-content-center align-items-center"
@@ -92,7 +92,7 @@
         </div>
     </div>
 
-    <!-- 最新消息-news -->
+    <!-- 最新消息 - news -->
     <div id="container_news" class="container-fluid my-2">
         <div class="container">
             <div class="row">
@@ -127,10 +127,6 @@
                 <div class="card card-6"></div>
             </div>
         </div>
-        <!-- <div class="row mx-3" data-bottom-top="transform: translateY(100px); opacity: 0;"
-            data-center="transform: translateY(0px); opacity: 1">
-
-        </div> -->
     </div>
 
     <!-- 會員專區 - FansClub -->
@@ -166,72 +162,74 @@
         </div>
     </div>
 
-
+    <!-- 戰績列表 - State -->
     <div id="container_State_Video" class="container">
         <div class="row">
-            <div class="col-12 col-md-6 p-3">
-                <table class="text-center m-auto w-75">
-                    <thead>
-                        <tr class="bg-dark text-light">
-                            <th>隊伍</th>
-                            <th>勝</th>
-                            <th>負</th>
-                            <th>和</th>
-                            <th>勝率</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="teams team-1">
-                                <img src="./Teams/monkey.png" alt="">
-                            </td>
-                            <td class="win">4</td>
-                            <td class="lose">1</td>
-                            <td class="safe">1</td>
-                            <td class="percent percent-1" data-num="1"></td>
-                        </tr>
-                        <tr>
-                            <td class="teams team-2">
-                                <img src="./Teams/lion.png" alt="">
-                            </td>
-                            <td class="win-2">4</td>
-                            <td class="lose-2">1</td>
-                            <td class="safe-2">0</td>
-                            <td class="percent percent-2" data-num="2"></td>
-                        </tr>
-                        <tr>
-                            <td class="teams team-3">
-                                <img src="./Teams/dragon.png" alt="">
-                            </td>
-                            <td class="win-3">3</td>
-                            <td class="lose-3">3</td>
-                            <td class="safe-3">0</td>
-                            <td class="percent percent-3" data-num="3"></td>
-                        </tr>
-                        <!-- <tr>
-                            <td class="teams team-4">
-                                <img src="./Teams/e.png" alt="">
-                            </td>
-                            <td class="win-4">2</td>
-                            <td class="lose-4">5</td>
-                            <td class="safe-4">0</td>
-                            <td class="percent percent-4" data-num="4"></td>
-                        </tr>
-                        <tr>
-                            <td class="teams team-5">
-                                <img src="./Teams/f.png" alt="">
-                            </td>
-                            <td class="win-5">1</td>
-                            <td class="lose-5">4</td>
-                            <td class="safe-5">1</td>
-                            <td class="percent percent-5" data-num="5"></td>
-                        </tr> -->
-                    </tbody>
-                </table>
+            <div class="col-12 col-md-6">
+                <div id="contaimer_video" class="container">
+                    <table class="text-center m-auto w-75">
+                        <thead>
+                            <tr class="bg-dark text-light">
+                                <th>隊伍</th>
+                                <th>勝</th>
+                                <th>負</th>
+                                <th>和</th>
+                                <th>勝率</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="teams team-1">
+                                    <img src="./Teams/monkey.png" alt="">
+                                </td>
+                                <td class="win">4</td>
+                                <td class="lose">1</td>
+                                <td class="safe">1</td>
+                                <td class="percent percent-1" data-num="1"></td>
+                            </tr>
+                            <tr>
+                                <td class="teams team-2">
+                                    <img src="./Teams/lion.png" alt="">
+                                </td>
+                                <td class="win-2">4</td>
+                                <td class="lose-2">1</td>
+                                <td class="safe-2">0</td>
+                                <td class="percent percent-2" data-num="2"></td>
+                            </tr>
+                            <tr>
+                                <td class="teams team-3">
+                                    <img src="./Teams/dragon.png" alt="">
+                                </td>
+                                <td class="win-3">3</td>
+                                <td class="lose-3">3</td>
+                                <td class="safe-3">0</td>
+                                <td class="percent percent-3" data-num="3"></td>
+                            </tr>
+                            <!-- <tr>
+                                <td class="teams team-4">
+                                    <img src="./Teams/e.png" alt="">
+                                </td>
+                                <td class="win-4">2</td>
+                                <td class="lose-4">5</td>
+                                <td class="safe-4">0</td>
+                                <td class="percent percent-4" data-num="4"></td>
+                            </tr>
+                            <tr>
+                                <td class="teams team-5">
+                                    <img src="./Teams/f.png" alt="">
+                                </td>
+                                <td class="win-5">1</td>
+                                <td class="lose-5">4</td>
+                                <td class="safe-5">1</td>
+                                <td class="percent percent-5" data-num="5"></td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
 
             </div>
 
-            <div class="col-12 col-md-6 p-3">
+            <div class="col-12 col-md-6">
                 <div id="contaimer_video" class="container">
                     <iframe width="100%" height="400px" src="https://www.youtube.com/embed/NcCm5sTveOA"
                         title="中信兄弟2023年度應援歌曲「連霸黃潮」CTBC Brothers チュウシンキョウダイ" frameborder="0"
@@ -243,8 +241,9 @@
         </div>
     </div>
 
-    <footer class="p-0">
-        <div class="container-fluid">
+    <!-- footer -->
+    <footer>
+        <div id="container_footer" class="container-fluid">
             <div class="row">
                 <div class="footer_info footer_info-1 col-md-3 d-sm-flex d-md-block my-3">
                     <div class="footer_logo" data-bottom-top="background-size: 150%; opacity: 0"
@@ -269,7 +268,7 @@
                         <li class="footer_ py-2"><a href="#">STORE - 商城</a></li>
                     </ul>
                 </div>
-                <div class="footer_info col-md-3 mb-sm-5 my-md-3">
+                <div class="footer_info col-md-3 my-3">
                     <ul class="list-unstyled">
                         <li class="footer_ py-2"><a href="#">ACTIVITY - 活動</a></li>
                         <hr>
@@ -277,9 +276,8 @@
                         <hr>
                         <li class="footer_ py-2"><a href="#">MEMBERS - 會員中心</a></li>
                     </ul>
-
                     <div class="col-12 m-3">
-                        <div class="social_icons d-flex justify-content-end">
+                        <div class="social_icons d-flex justify-content-center justify-content-md-end">
                             <div class="icon ic_facebook">
                                 <a href="https://www.facebook.com/Brotherelephants" target="_blank">
                                     <img loading="lazy" class="wp-image-3555 alignnone"
@@ -313,6 +311,18 @@
             </div>
         </div>
     </footer>
+
+    <section id="section_more">
+        <div class="jumbotron">
+            <div class="container">
+                <h3>追蹤中信兄弟最新消息</h3>
+                <input type="text" class="form-control" placeholder="E-mail">
+                <br>
+                <button class="btn btn-default">訂閱</button>
+            </div>
+        </div>
+
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
